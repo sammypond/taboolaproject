@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function (e){
 		.then( function (json){
 			res = json.list;
 			console.log(res);
-			res.forEach(item => {
-				const imgUrl = item.thumbnail[0].url;
-				const category = item.categories[0];
-				const { branding, url } = item;
-				let { name } = item;
+			res.forEach(list => {
+				const imgUrl = list.thumbnail[0].url;
+				const category = list.categories[0];
+				const { branding, url } = list;
+				let { name } = list;
 				if (name.length > 75) {
 					name = name.substring(0, 75) + "...";
 				}
